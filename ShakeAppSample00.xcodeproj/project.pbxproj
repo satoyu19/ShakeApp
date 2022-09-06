@@ -11,6 +11,9 @@
 		7F7A28E72891185D00DCD482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A28E62891185D00DCD482 /* ContentView.swift */; };
 		7F7A28E92891186D00DCD482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A28E82891186D00DCD482 /* Assets.xcassets */; };
 		7F7A28EC2891186D00DCD482 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A28EB2891186D00DCD482 /* Preview Assets.xcassets */; };
+		7F850F5428B50B7800FFC42F /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F850F5328B50B7800FFC42F /* GameStartView.swift */; };
+		7FF7ABDA28B6500A00F9F0A7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF7ABD928B6500A00F9F0A7 /* GameView.swift */; };
+		7FF7ABDC28B6506C00F9F0A7 /* MotionSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF7ABDB28B6506C00F9F0A7 /* MotionSensor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		7F7A28E62891185D00DCD482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F7A28E82891186D00DCD482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7A28EB2891186D00DCD482 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F850F5328B50B7800FFC42F /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
+		7FF7ABD928B6500A00F9F0A7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		7FF7ABDB28B6506C00F9F0A7 /* MotionSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSensor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				7F7A28E42891185D00DCD482 /* ShakeAppSample00App.swift */,
+				7F850F5328B50B7800FFC42F /* GameStartView.swift */,
 				7F7A28E62891185D00DCD482 /* ContentView.swift */,
+				7FF7ABD928B6500A00F9F0A7 /* GameView.swift */,
+				7FF7ABDB28B6506C00F9F0A7 /* MotionSensor.swift */,
 				7F7A28E82891186D00DCD482 /* Assets.xcassets */,
 				7F7A28EA2891186D00DCD482 /* Preview Content */,
 			);
@@ -139,6 +148,9 @@
 			files = (
 				7F7A28E72891185D00DCD482 /* ContentView.swift in Sources */,
 				7F7A28E52891185D00DCD482 /* ShakeAppSample00App.swift in Sources */,
+				7FF7ABDA28B6500A00F9F0A7 /* GameView.swift in Sources */,
+				7F850F5428B50B7800FFC42F /* GameStartView.swift in Sources */,
+				7FF7ABDC28B6506C00F9F0A7 /* MotionSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

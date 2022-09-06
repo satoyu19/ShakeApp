@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
-
+import CoreMotion
+//viewでは振っている場合にimageが変わる各基準値と比較しておき、imageを変更させる
 struct ContentView: View {
+    
+    @ObservedObject var sensor = MotionSensor()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if(sensor.isShow){
+            GameView(sensor: sensor)
+        } else {
+            GameStartView(sensor: sensor)
+        }
     }
 }
 
@@ -19,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
