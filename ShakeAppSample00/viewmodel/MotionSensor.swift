@@ -5,14 +5,11 @@
 //  Created by cmStudent on 2022/08/24.
 //
 
-import Foundation
 import CoreMotion
 import UIKit
 
 //TODO: contentと同じMotionSensorを渡すよう改善する
 class MotionSensor: NSObject, ObservableObject {
-    
-    @Published var isStarted = false
     
     @Published var yStr = 0.0
     
@@ -20,11 +17,13 @@ class MotionSensor: NSObject, ObservableObject {
     
     @Published var result = "振って振って"
     
-    @Published var isShow = false
+    @Published var viewState: Flag = .intro
     
     @Published var player = "プレイヤー１"
     
     @Published var persons = [String]()
+    
+    @Published var imgString = "gameimg1"
     
     let motionManager = CMMotionManager()
         
@@ -39,11 +38,11 @@ class MotionSensor: NSObject, ObservableObject {
             })
         }
         
-        isStarted = true
+        viewState = .start
     }
     
     func stop() {
-        isStarted = false
+        viewState = .out
         motionManager.stopDeviceMotionUpdates()
     }
     
@@ -58,16 +57,26 @@ class MotionSensor: NSObject, ObservableObject {
 
         if(shakeCount > 10 && shakeCount < 20){
             result = "危ない！！！"
+            imgString = "gameimg2"
         } else if(shakeCount > 20){
             result = "アウト!!!\(player)の負けです!!!"
+            imgString = "gameimg3"
             feedbackGenerator.impactOccurred()
             stop()
         }
     }
     
     func reset(){
-        isShow = false
+        viewState = .title
         shakeCount = 0
         result = "振ってふって"
+        imgString = "gameimg1"
     }
+}
+
+enum Flag{
+    case start
+    case title
+    case intro
+    case out
 }

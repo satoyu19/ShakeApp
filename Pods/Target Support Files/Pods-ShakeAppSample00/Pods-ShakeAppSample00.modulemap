@@ -1,0 +1,6 @@
+framework module Pods_ShakeAppSample00 {
+  umbrella header "Pods-ShakeAppSample00-umbrella.h"
+
+  export *
+  module * { export * }
+}

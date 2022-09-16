@@ -1,0 +1,20 @@
+PODS:
+  - EAIntroView (2.13.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
+
+DEPENDENCIES:
+  - EAIntroView
+
+SPEC REPOS:
+  trunk:
+    - EAIntroView
+    - EARestrictedScrollView
+
+SPEC CHECKSUMS:
+  EAIntroView: 9adedfc6b5c3fd3ebe19766da01dae573e6ce053
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+
+PODFILE CHECKSUM: ead2d7ea2a6c2e7a3df87acdff7883d0cc638cca
+
+COCOAPODS: 1.11.3

@@ -13,10 +13,12 @@ struct ContentView: View {
     @ObservedObject var sensor = MotionSensor()
 
     var body: some View {
-        if(sensor.isShow){
-            GameView(sensor: sensor)
-        } else {
+        if(sensor.viewState == .intro){
+        IntroView(parent: self)
+        } else if(sensor.viewState == .title){
             GameStartView(sensor: sensor)
+        } else {
+            GameView(sensor: sensor)
         }
     }
 }

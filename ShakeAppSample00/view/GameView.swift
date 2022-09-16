@@ -14,10 +14,10 @@ struct GameView: View {
     @State var playerCount = 0
     
     @State var playRound = 1
-    
+        
         var body: some View {
             ZStack{
-                Color("backGroundColor")
+                Color("backColor")
                     .edgesIgnoringSafeArea(.all)
             VStack(spacing: 50) {
                 Text("\(String(playRound))周目")
@@ -27,9 +27,9 @@ struct GameView: View {
                     .foregroundColor(Color("textColor"))
                     
 
-                Image("watermark")
+                Image(sensor.imgString)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 80, height: 160)
                     
                 
                 Text(String(sensor.result))
@@ -40,7 +40,7 @@ struct GameView: View {
                     .font(.title3)
                     .foregroundColor(Color("textColor"))
                 
-                if(sensor.isStarted == true){
+                if(sensor.viewState == .start){
                     Button(action: {
                         if(sensor.persons.count - 1 > playerCount){
                             playerCount = playerCount + 1
@@ -55,7 +55,7 @@ struct GameView: View {
                             .frame(width: 200, height: 100)
                             .background(Color.orange)
                     }
-                } else {
+                } else if(sensor.viewState == .out) {
                     Button(action: {
                         sensor.reset()
                     }) {
